@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    width: 100%;
+    min-height: 100vh;
+    background-image:  url(Home.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    font-family: 'Times New Roman';
+ 
+}
+nav{
+    display: flex;
+    padding:2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .logo {
+    width: 80px; /* Smaller size for the logo */
+    height: 80px; /* Make it a square */
+    border-radius: 50%; /* Make the logo circular */
+    object-fit: cover; /* Ensure image fits in the circle */
+    border: 2px solid white; /* Optional border around the logo */
+}
+.textbox{
+    width: 90%;
+    color: aliceblue;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.textbox h1{
+    font-size: 50px;
+}
+.textbox p{
+    margin: 10px 0 30px;
+    font-size: 15px;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color:aqua;
+    border: 1px solid white;
+    padding: 10px 34px;
+    font-size: 15px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{ 
+    border: 1px solid orangered;
+    background:orangered;
+    transition: 0.5s;
+}
+nav .fa{
+    display: none;
+}
+/* Switch background image for mobile devices */
+@media (max-width: 700px) {
+    .header {
+        background-image: url(mob.png); /* Switch to mobile-specific background */
+    }
+    .textbox{
+        position: absolute;
+    top: 65%;
+    left: 25%;
+    transform: translate(-20%, -10%);
+    text-align: center;
+    }
+    .textbox h1 {
+        font-size: 28px;
+    }
+
+    .textbox p {
+        font-size: 14px;
+    }
+
+    .hero-btn {
+        padding: 8px 24px;
+        font-size: 12px;
+    }
+
+    nav .logo {
+        width: 60px; /* Reduce size for mobile */
+        height: 60px;
+    }
+}
