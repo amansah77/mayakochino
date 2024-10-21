@@ -1,92 +1,291 @@
-*{
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-.header{
+
+/* Navigation Bar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: blue; /* Blue background */
+    color: white;
+}
+
+/* Logo and Company Name */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.company-name h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.company-name h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.nav-links {
+    background-color: #fb8500;
+    display: flex; /* Use flex to keep links in a row */
+    margin-left: auto; /* Push nav-links to the left */
+}
+
+.nav-links ul {
+    display: flex; /* Use flex to arrange list items inline */
+    padding-left: 0; /* Remove default padding */
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 65px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff; /* White text color */
+    font-size: 1.2rem; /* Increase text size */
+}
+
+.nav-links a:hover {
+    color: #ff5733; /* Change color on hover */
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 10px;
+    margin-left: -40px;
+    background-color: #ff9900;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+}
+
+/* Icons Styling */
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons a {
+    text-decoration: none;
+    color: white;
+}
+
+.cart-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.cart-icon h3 {
+    margin-left: 5px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+
+.cart-icon a {
+    text-decoration: none;
+}
+
+.icons BUTTON {
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 15px;
+    background: #ff9900;
+    position: relative;
+    cursor: pointer;
+    color: white;
+}
+
+.home-section {
     width: 100%;
     min-height: 100vh;
-    background-image:  url(Home.png);
+    background-image: url(Home.png);
     background-position: center;
     background-size: cover;
     position: relative;
     font-family: 'Times New Roman';
- 
 }
-nav{
-    display: flex;
-    padding:2% 6%;
-    justify-content: space-between;
-    align-items: center;
+
+.intro-text a {
+    text-decoration: none;
+    color: white;
 }
-nav .logo {
-    width: 80px; /* Smaller size for the logo */
-    height: 80px; /* Make it a square */
-    border-radius: 50%; /* Make the logo circular */
-    object-fit: cover; /* Ensure image fits in the circle */
-    border: 2px solid white; /* Optional border around the logo */
+
+.buttonhe {
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 15px;
+    background: #ff9900;
+    position: relative;
+    cursor: pointer;
+    color: white;
 }
-.textbox{
+
+.intro-text {
     width: 90%;
     color: aliceblue;
     position: absolute;
     top: 50%;
     left: 25%;
     transform: translate(-50%, -50%);
+    max-width: 600px; /* Set a maximum width for the text */
+    margin: 0 auto; /* Center the text block horizontally */
+    text-align: center; /* Center-align the text */
+    padding: 20px; /* Add some padding around the text */
+    border-radius: 10px; /* Optional: Rounded corners */
+}
+
+.intro-text h1 {
+    font-size: 60px;
+    color: white;
+}
+
+.intro-text p {
+    margin: 10px 0 20px;
+    font-size: 15px;
+    color: white;
+}
+
+.footer {
+    background-color: #000000; /* Black background */
+    padding: 20px 0;
     text-align: center;
-}
-.textbox h1{
-    font-size: 50px;
-}
-.textbox p{
-    margin: 10px 0 30px;
-    font-size: 15px;
-}
-.hero-btn{
-    display: inline-block;
-    text-decoration: none;
-    color:aqua;
-    border: 1px solid white;
-    padding: 10px 34px;
-    font-size: 15px;
-    background: transparent;
+    color: #ffffff; /* White text */
     position: relative;
-    cursor: pointer;
+    bottom: 0;
+    width: 100%;
 }
-.hero-btn:hover{ 
-    border: 1px solid orangered;
-    background:orangered;
-    transition: 0.5s;
+
+.footer-container {
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
-nav .fa{
-    display: none;
+
+.footer-socials {
+    margin-bottom: 10px;
 }
-/* Switch background image for mobile devices */
-@media (max-width: 700px) {
-    .header {
-        background-image: url(mob.png); /* Switch to mobile-specific background */
+
+.footer-socials a {
+    margin: 0 9px; /* Space between icons (30px total gap) */
+    text-decoration: none;
+}
+
+.footer-text {
+    font-size: 18px;
+    color: #b0b0b0; /* Slightly dimmed white text */
+    margin-top: 10px;
+}
+
+.footer-text1 a {
+    font-size: 18px;
+    color: #ffcc33; /* Slightly dimmed white text */
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #ffcc33;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Navbar adjustments for mobile */
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the left */
     }
-    .textbox{
-        position: absolute;
-    top: 65%;
-    left: 25%;
-    transform: translate(-20%, -10%);
-    text-align: center;
-    }
-    .textbox h1 {
-        font-size: 28px;
+    
+    .nav-links ul {
+        flex-direction: column; /* Stack nav links */
+        padding: 0; /* Remove padding */
+        display: none;
     }
 
-    .textbox p {
-        font-size: 14px;
+    .nav-links ul li {
+        padding: 10px 0; /* Reduce padding for mobile */
     }
 
-    .hero-btn {
-        padding: 8px 24px;
+    /* Search Bar adjustments */
+    .search-bar {
+        width: 100%; /* Full width on mobile */
+        margin-top: 10px;
+    }
+
+    .search-bar input {
+        width: 100%; /* Full width */
+    }
+
+    /* Intro Text adjustments */
+    .intro-text {
+        width: 100%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        max-width: 600px; /* Set a maximum width for the text */
+        margin: 0 auto; /* Center the text block horizontally */
+        text-align: center; /* Center-align the text */
+        padding: 20px; /* Add some padding around the text */
+        border-radius: 10px; /* Optional: Rounded corners */
+    }
+
+    .intro-text h1 {
+       
+        font-size: 40px; /* Smaller font size */
+    }
+
+    .intro-text p {
         font-size: 12px;
+        margin: 0 auto;
     }
 
-    nav .logo {
-        width: 60px; /* Reduce size for mobile */
-        height: 60px;
+    /* Footer adjustments */
+    .footer-container {
+        flex-direction: column; /* Stack items */
+    }
+}
+
+/* Mobile-specific Background Image */
+@media (max-width: 768px) {
+    .home-section {
+        background-image: url(mob.png); /* Different image for mobile */
     }
 }
