@@ -1,9 +1,17 @@
 /* General Reset */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
+
+:root{
+    --semi-color : #ca2e55;
+}
+
 
 /* Navigation Bar Styling */
 .navbar {
@@ -11,7 +19,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    background-color: blue; /* Blue background */
+    width: 100%;
+    background-color: #003f91; /* Blue background */
     color: white;
 }
 
@@ -39,7 +48,7 @@
 }
 
 .nav-links {
-    background-color: #fb8500;
+    background-color: var(--semi-color);
     display: flex; /* Use flex to keep links in a row */
     margin-left: auto; /* Push nav-links to the left */
 }
@@ -61,9 +70,6 @@
     font-size: 1.2rem; /* Increase text size */
 }
 
-.nav-links a:hover {
-    color: #ff5733; /* Change color on hover */
-}
 
 /* Search Bar */
 .search-bar {
@@ -82,7 +88,7 @@
 .search-bar button {
     padding: 10px;
     margin-left: -40px;
-    background-color: #ff9900;
+    background-color: var(--semi-color);
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -123,7 +129,7 @@
     border: 1px solid white;
     padding: 12px 34px;
     font-size: 15px;
-    background: #ff9900;
+    background: var(--semi-color);
     position: relative;
     cursor: pointer;
     color: white;
@@ -150,11 +156,14 @@
     border: 1px solid white;
     padding: 12px 34px;
     font-size: 15px;
-    background: #ff9900;
+    background: var(--semi-color);
     position: relative;
     cursor: pointer;
     color: white;
 }
+
+
+
 
 .intro-text {
     width: 90%;
@@ -288,4 +297,94 @@
     .home-section {
         background-image: url(mob.png); /* Different image for mobile */
     }
+}
+
+.nav-links a:hover{
+    
+    color: #1D1E2C;
+    transition: 0.2s all ease-in-out;
+}
+
+.footer {
+    background-color: 272727;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-text a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: #ffd700;
+}
+
+.social-link i {
+    font-size: 1.5em;
+}
+
+
+.social-link i:hover {
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.maya-ko-text{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    text-align: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    position: relative;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-links a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--highlight-color);
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: var(--highlight-color);
 }
