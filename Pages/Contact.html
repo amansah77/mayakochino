@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Maya को चिनो</title>
-    <link rel="stylesheet" href="./CSS/AboutUs.css">
+    <title>Contact Us - Maya को चिनो</title>
+    <link rel="stylesheet" href="./CSS/Contact.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css" rel="stylesheet">
@@ -39,16 +39,30 @@
             <li><a href="#" class="link">Categories</a></li>
             <li><a href="#" class="link">Gifts</a></li>
             <li><a href="#" class="link">Electronics</a></li>
-            <li><a href="./Policy.html" class="link">Policy</a></li>
+            <li><a href="#" class="link">Policy</a></li>
             <li><a href="./Contact.html" class="link">Contact</a></li>
         </ul>
     </div>
 </header>
     <main>
-        <section class="about-us">
-            <h2>Welcome to Maya को चिनो!</h2>
-            <p>Discover a delightful selection of unique and thoughtful gifts perfect for any occasion. Whether you’re celebrating a birthday, an anniversary, or simply want to show someone you care, our carefully curated collection has something special for everyone.</p>
-            <p>Explore our range of handcrafted items, personalized gifts, and charming accessories that embody love and creativity. Visit us today and find the perfect gift to express your sentiments!</p>
+        <section class="contact">
+            <h2>Get in Touch with Us!</h2>
+            <p>If you have any questions, concerns, or feedback, feel free to reach out to us. We would love to hear from you!</p>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
         </section>
     </main>
     <footer class="footer">
